@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="bg-grey">
+        <h5>Ajouter une nouvelle Categorie</h5>
+            <form action="/api/categories/deleteCategorie/<%= categorie.id %> " method="post">
+            <h4>Are you sure you want to delete category  <%= categorie.title  %></h4>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-danger">Suprimer</button>
+        </div>
+        </form>
+    </main>
+    
+</body>
+</html>

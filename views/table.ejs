@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <title>Document</title>
+</head>
+<body>  
+  <div>
+    <a href="/api/categories/addCategorie" class="btn bg-success text-white border border-success rounded">Add</a>
+  </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if(categories.length > 0) { %> 
+          <% for(let category of categories) { %> 
+          <tr>
+            <th scope="row"><%= category.id %></th>
+            <td><%= category.title %></td>
+            <td>
+              <a href="/api/categories/updateCategorie/<%= category.id  %> " class="btn bg-warning text-white border border-warning rounded">Update</a>
+              
+            </td>
+            <td>
+              <a href="/api/categories/deleteCategorie/<%= category.id  %> " class="btn bg-danger text-white border border-danger rounded">Delete</a>
+            </td>
+          </tr>
+          <% } %>
+          <% } %> 
+        </tbody>
+      </table>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
